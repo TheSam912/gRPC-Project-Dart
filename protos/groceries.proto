@@ -1,4 +1,5 @@
 syntax = "proto3";
+//we define the version of proto we want to use that here is proto3
 
 service GroceriesService {
     rpc createItem (Item) returns (Item) {}
@@ -20,9 +21,9 @@ service GroceriesService {
 
 }
 
-message Empty {}
+message Empty {} // this is the empty method to pass to the method we have as a empty parameter 
 
-message Item {
+message Item { //these numbers like 1,2,3 are tag and they are unique  for every field in our message. They help us. these tags are from 1 to 15
     int32 id = 1;
     string name = 2;
     int32 categoryId = 3;
@@ -34,7 +35,7 @@ message Category {
 }
 
 message Items {
-    repeated Item items = 1;
+    repeated Item items = 1; //this 'repeated' keyword mean it make us a array or list of that item. it makes list
 }
 
 message Categories {
