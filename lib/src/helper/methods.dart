@@ -1,9 +1,6 @@
-
-import 'package:dart_grpc_server/src/db/data.dart';
 import 'package:dart_grpc_server/src/generated/groceries.pb.dart';
 
 class HelperMethods {
-
   Category getCategoryFromMap(Map category) {
     var _idTag = 1;
     var _nameTag = 2;
@@ -22,7 +19,6 @@ class HelperMethods {
     return Item.fromJson(
         '{"$_idTag": $_id, "$_nameTag": "$_name", "$_categoryTag": $_categoryId}');
   }
-
 }
 
 final helper = HelperMethods();
